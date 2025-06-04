@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9;
+    color: #222;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #1f1f1f;
+    color: white;
     padding: 2em;
     text-align: center;
 }
@@ -17,9 +17,30 @@ main {
     padding: 2em;
 }
 
+section {
+    margin-bottom: 3em;
+}
+
+h2 {
+    color: #c0392b;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 footer {
+    background-color: #333;
+    color: #eee;
     text-align: center;
     padding: 1em;
-    background-color: #222;
-    color: white;
 }
