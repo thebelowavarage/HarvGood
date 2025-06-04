@@ -183,3 +183,39 @@ footer {
 .cta-button:hover {
     background: #d4ac0d;
 }
+
+
+.cta-button:hover {
+    background: #d4ac0d;
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    background-color: #0d1a35;
+    color: #f1c40f;
+    min-height: 60vh;
+}
+
+.contact-box {
+    max-width: 700px;
+    background: #0d1a35;
+    padding: 3em;
+    border-radius: 8px;
+    color: #f1c40f;
+    font-size: 1.1em;
+}
+
+.contact-box h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.contact-box p {
+    margin: 0.6em 0;
+    color: #ffffff;
+}
