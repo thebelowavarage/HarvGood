@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div style="text-align: right; padding: 10px 20px;">
+  <button onclick="switchLanguage()" id="lang-toggle">切换到中文</button>
+</div>
+
+<div id="english-content">
+    <h2>Nationwide Delivery</h2>
+    <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities and construction sites in Zimbabwe.</p>
+</div>
+
+<div id="chinese-content" style="display: none;">
+    <h2>全国送货服务</h2>
+    <p>HarvGood 为津巴布韦各大城市及工地提供安全、及时的钢筋运输服务。</p>
+</div>
+
     <header class="site-header">
         <div class="nav-container">
             <h1 class="logo">Harvgood Pvt Ltd</h1>
@@ -25,10 +39,16 @@
 
 
     <main>
-        <section>
+        <div id="english-content">
             <h2>Nationwide Delivery</h2>
-            <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities and construction sites in Zimbabwe. Whether your project is in Harare, Bulawayo, Mutare, or beyond — we've got you covered.</p>
-        </section>
+            <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities and construction sites in Zimbabwe.</p>
+        </div>
+
+        <div id="chinese-content" style="display: none;">
+            <h2>全国送货服务</h2>
+            <p>HarvGood 为津巴布韦各大城市及工地提供安全、及时的钢筋运输服务。</p>
+        </div>
+        
 
         <section>
             <h2>Our Logistics Advantage</h2>
@@ -48,5 +68,23 @@
     <footer>
         <p>© 2025 HarvGood Private Limited. All rights reserved.</p>
     </footer>
+
+<script>
+function switchLanguage() {
+    const en = document.getElementById("english-content");
+    const zh = document.getElementById("chinese-content");
+    const btn = document.getElementById("lang-toggle");
+
+    if (en.style.display === "none") {
+        en.style.display = "block";
+        zh.style.display = "none";
+        btn.innerText = "切换到中文";
+    } else {
+        en.style.display = "none";
+        zh.style.display = "block";
+        btn.innerText = "Switch to English";
+    }
+}
+</script>
 </body>
 </html>

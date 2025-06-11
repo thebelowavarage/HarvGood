@@ -16,6 +16,12 @@
 </head>
 
 <body>
+<div style="text-align: right; padding: 10px 20px;">
+  <button onclick="switchLanguage()" id="lang-toggle">切换到中文</button>
+</div>
+
+
+
     <header>
         <div class="nav-container">
             <h1 class="logo">Harvgood Pvt Ltd</h1>
@@ -42,14 +48,13 @@
     </header>
 
     <main>
+        <section id="english-content">
         <section id="about" class="scroll-fade">
-            <h2>About Harvgood</h2>
-            <p>
-                Harvgood Private Limited is a trusted supplier of reinforcement steel products in Zimbabwe.
-                We proudly partner with Dinson Iron and Steel Company (DISCO) to bring you internationally
-                certified, high-quality steel solutions for construction, infrastructure, and industrial use.
-            </p>
-            <a href="dinson-steel-supplier.html" style="
+        <h2>About Harvgood</h2>
+        <p>Harvgood Private Limited is a trusted supplier of reinforcement steel products in Zimbabwe.
+        We proudly partner with Dinson Iron and Steel Company (DISCO) to bring you internationally
+        certified, high-quality steel solutions for construction, infrastructure, and industrial use.</p>
+        <a href="dinson-steel-supplier.html" style="
                 display: inline-block;
                 padding: 10px 20px;
                 background-color: #cdb620;
@@ -59,8 +64,27 @@
                 font-weight: bold;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 ">About Dinson Steels</a>
+    </section>
+</section>
 
-        </section>
+        
+
+<section id="chinese-content" style="display: none;">
+    <section id="about" class="scroll-fade">
+        <h2>关于 Harvgood</h2>
+        <p>Harvgood Private Limited 是津巴布韦值得信赖的钢筋供应商。我们与津信钢铁公司（DISCO）合作，为建筑、基础设施和工业项目提供国际认证的高质量钢材解决方案。</p>
+        <a href="dinson-steel-supplier.html" style="
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #cdb620;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                ">About Dinson Steels</a>
+    </section>
+</section>
 
         <section>
             <section id="Reinforcement Bar" class="scroll-fade"> </section>
@@ -117,5 +141,23 @@
         <p>&copy; 2025 Harvgood Private Limited. All rights reserved.</p>
     </footer>
 <script src="script.js"></script>
+
+<script>
+function switchLanguage() {
+    const en = document.getElementById("english-content");
+    const zh = document.getElementById("chinese-content");
+    const btn = document.getElementById("lang-toggle");
+
+    if (en.style.display === "none") {
+        en.style.display = "block";
+        zh.style.display = "none";
+        btn.innerText = "切换到中文";
+    } else {
+        en.style.display = "none";
+        zh.style.display = "block";
+        btn.innerText = "Switch to English";
+    }
+}
+</script>
 </body>
 </html>

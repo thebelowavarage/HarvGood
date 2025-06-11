@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div style="text-align: right; padding: 10px 20px;">
+  <button onclick="switchLanguage()" id="lang-toggle">切换到中文</button>
+</div>
+
+
+
     <header>
         <div class="nav-container">
             <h1 class="logo">Harvgood Pvt Ltd</h1>
@@ -23,18 +29,46 @@
     </header>
 
     <main class="contact-section">
-        <div class="contact-box">
-            <h2>GET IN TOUCH</h2>
-            <p>📍 25 Alexander Rd, Harare, Zimbabwe</p>
-            <p>📞 +263 77 9086666</p>
-            <p>📱 +263 78 3775986</p>
-            <p>📧 ralph1810@qq.com</p>
-            <p>📧 50669466@qq.com</p>
-        </div>
+        <div id="english-content">
+    <h2>GET IN TOUCH</h2>
+    <p>📍 25 Alexander Rd, Harare, Zimbabwe</p>
+    <p>📞 +263 77 9086666</p>
+    <p>📱 +263 78 3775986</p>
+    <p>📧 ralph1810@qq.com</p>
+    <p>📧 50669466@qq.com</p>
+</div>
+
+<div id="chinese-content" style="display: none;">
+    <h2>联系我们</h2>
+    <p>📍 津巴布韦，哈拉雷，亚历山大路25号</p>
+    <p>📞 +263 77 9086666</p>
+    <p>📱 +263 78 3775986</p>
+    <p>📧 ralph1810@qq.com</p>
+    <p>📧 50669466@qq.com</p>
+</div>
     </main>
 
     <footer>
         <p>&copy; 2025 Harvgood Private Limited. All rights reserved.</p>
     </footer>
+
+<script>
+
+function switchLanguage() {
+    const en = document.getElementById("english-content");
+    const zh = document.getElementById("chinese-content");
+    const btn = document.getElementById("lang-toggle");
+
+    if (en.style.display === "none") {
+        en.style.display = "block";
+        zh.style.display = "none";
+        btn.innerText = "切换到中文";
+    } else {
+        en.style.display = "none";
+        zh.style.display = "block";
+        btn.innerText = "Switch to English";
+    }
+}
+</script>
 </body>
 </html>

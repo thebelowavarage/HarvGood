@@ -4,6 +4,12 @@
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+<div style="text-align: right; padding: 10px 20px;">
+  <button onclick="switchLanguage()" id="lang-toggle">切换到中文</button>
+</div>
+
+
+
     <header>
         <div class="nav-container">
             <h1 class="logo">Harvgood Pvt Ltd</h1>
@@ -20,14 +26,34 @@
         </div>
         
     </header>
-  <div class="container">
-    <h1>Dinson Steel Supplier in Zimbabwe</h1>
-    <p>
-      HarvGood Private Limited is proud to be a trusted supplier of Dinson Steel in Zimbabwe. We provide high-quality reinforcement steel bars sourced directly from Dinson Iron and Steel Company, one of Africa’s leading steel producers.
-    </p>
-    <p>
-      Whether you're building residential homes or large infrastructure projects, HarvGood ensures reliable supply, affordable pricing, and certified products. Our partnership with Dinson Steel guarantees you get durable and verified steel products tailored for your construction needs.
-    </p>
-  </div>
+<div id="english-content">
+  <h1>Dinson Steel Supplier in Zimbabwe</h1>
+  <p>HarvGood Private Limited is proud to be a trusted supplier of Dinson Steel in Zimbabwe. We provide high-quality reinforcement steel bars sourced directly from Dinson Iron and Steel Company, one of Africa’s leading steel producers.</p>
+  <p>Whether you're building residential homes or large infrastructure projects, HarvGood ensures reliable supply, affordable pricing, and certified products.</p>
+</div>
+
+<div id="chinese-content" style="display: none;">
+  <h1>津信钢铁津巴布韦供应商</h1>
+  <p>HarvGood Private Limited 是津信钢铁在津巴布韦的可靠供应商，提供高质量的钢筋，直接来自非洲领先的钢铁制造商津信钢铁公司。</p>
+  <p>无论是住宅建设还是大型基础设施项目，HarvGood 都确保供应可靠、价格实惠、产品认证齐全。</p>
+</div>
+
+<script>
+function switchLanguage() {
+    const en = document.getElementById("english-content");
+    const zh = document.getElementById("chinese-content");
+    const btn = document.getElementById("lang-toggle");
+
+    if (en.style.display === "none") {
+        en.style.display = "block";
+        zh.style.display = "none";
+        btn.innerText = "切换到中文";
+    } else {
+        en.style.display = "none";
+        zh.style.display = "block";
+        btn.innerText = "Switch to English";
+    }
+}
+</script>
 </body>
 </html>
