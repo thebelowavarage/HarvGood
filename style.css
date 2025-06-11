@@ -219,3 +219,14 @@ footer {
     margin: 0.6em 0;
     color: #ffffff;
 }
+
+.lang-switch a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 4px;
+}
+.lang-switch .lang-active {
+    color: #cdb620;
+    text-decoration: underline;
+}

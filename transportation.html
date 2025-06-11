@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steel Transportation Services | HarvGood Private Limited</title>
-    <meta name="description" content="HarvGood offers reliable transportation and delivery of reinforcement steel across Zimbabwe. Safe, timely, and cost-effective logistics.">
+    <meta name="description"
+        content="HarvGood offers reliable transportation and delivery of reinforcement steel across Zimbabwe. Safe, timely, and cost-effective logistics.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div style="text-align: right; padding: 10px 20px;">
-  <button onclick="switchLanguage()" id="lang-toggle">切换到中文</button>
-</div>
 
-<div id="english-content">
-    <h2>Nationwide Delivery</h2>
-    <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities and construction sites in Zimbabwe.</p>
-</div>
-
-<div id="chinese-content" style="display: none;">
-    <h2>全国送货服务</h2>
-    <p>HarvGood 为津巴布韦各大城市及工地提供安全、及时的钢筋运输服务。</p>
-</div>
 
     <header class="site-header">
         <div class="nav-container">
-            <h1 class="logo">Harvgood Pvt Ltd</h1>
+            <div class="lang-switch" style="float: right; margin-left: 20px;">
+                <a href="#" id="lang-en" class="lang-active">EN</a> /
+                <a href="#" id="lang-zh">中文</a>
+            </div>
+            <h1 class="logo" id="site-title">Harvgood Pvt Ltd</h1>
             <nav>
-                <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <ul>
+                    <li><a href="index.html" id="nav-home">Home</a></li>
+                    <li><a href="index.html#about" id="nav-about">About</a></li>
+                    <li><a href="index.html" id="nav-products">Products</a></li>
+                    <li><a href="transportation.html" id="nav-transport">Transportations</a></li>
+                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,51 +35,58 @@
 
     <main>
         <div id="english-content">
-            <h2>Nationwide Delivery</h2>
-            <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities and construction sites in Zimbabwe.</p>
+            <section>
+                <h2>Nationwide Delivery</h2>
+                <p>HarvGood provides safe and timely transportation of reinforcement steel products to all major cities
+                    and construction sites in Zimbabwe.</p>
+            </section>
+
+            <section>
+                <h2>Our Logistics Advantage</h2>
+                <ul>
+                    <li>Fleet of heavy-duty trucks optimized for steel transport</li>
+                    <li>Efficient loading and offloading processes</li>
+                    <li>Partnered with local logistics networks for extended reach</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Request a Delivery</h2>
+                <p>Contact us at <a href="mailto:ralph1810@qq.com">ralph1810@qq.com</a> or visit our <a
+                        href="contact.html">Contact Page</a> to arrange transportation for your steel orders.</p>
+            </section>
         </div>
 
         <div id="chinese-content" style="display: none;">
-            <h2>全国送货服务</h2>
-            <p>HarvGood 为津巴布韦各大城市及工地提供安全、及时的钢筋运输服务。</p>
+            <section>
+                <h2>全国送货服务</h2>
+                <p>HarvGood 为津巴布韦各大城市及工地提供安全、及时的钢筋运输服务。</p>
+            </section>
+
+            <section>
+                <h2>我们的物流优势</h2>
+                <ul>
+                    <li>专为钢材运输优化的重型卡车车队</li>
+                    <li>高效的装卸流程</li>
+                    <li>与本地物流网络合作，拓展运输覆盖范围</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>申请送货服务</h2>
+                <p>请发送邮件至 <a href="mailto:ralph1810@qq.com">ralph1810@qq.com</a> 或访问 <a href="contact.html">联系我们</a>
+                    页面安排您的钢材运输。</p>
+            </section>
         </div>
-        
-
-        <section>
-            <h2>Our Logistics Advantage</h2>
-            <ul>
-                <li>Fleet of heavy-duty trucks optimized for steel transport</li>
-                <li>Efficient loading and offloading processes</li>
-                <li>Partnered with local logistics networks for extended reach</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Request a Delivery</h2>
-            <p>Contact us at <a href="mailto:ralph1810@qq.com">ralph1810@qq.com</a> or visit our <a href="contact.html">Contact Page</a> to arrange transportation for your steel orders.</p>
-        </section>
     </main>
+
 
     <footer>
         <p>© 2025 HarvGood Private Limited. All rights reserved.</p>
     </footer>
 
-<script>
-function switchLanguage() {
-    const en = document.getElementById("english-content");
-    const zh = document.getElementById("chinese-content");
-    const btn = document.getElementById("lang-toggle");
+    <script src="lang-toggle.js"></script>
 
-    if (en.style.display === "none") {
-        en.style.display = "block";
-        zh.style.display = "none";
-        btn.innerText = "切换到中文";
-    } else {
-        en.style.display = "none";
-        zh.style.display = "block";
-        btn.innerText = "Switch to English";
-    }
-}
-</script>
 </body>
+
 </html>
