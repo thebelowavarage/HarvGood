@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 32px;
+    color: #2d3a4b;
+}
+
+button {
+    background: #cdb620;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #b39a1b;
+}
+
+form#addItemForm {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0 20px 0;
+}
+
+form#addItemForm input[type="text"],
+form#addItemForm input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 180px;
+}
+
+table#inventoryTable {
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+table#inventoryTable th, table#inventoryTable td {
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table#inventoryTable th {
+    background: #f3e58c;
+    color: #2d3a4b;
+    font-size: 1.08rem;
+}
+
+table#inventoryTable tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    form#addItemForm {
+        flex-direction: column;
+        align-items: center;
+    }
+    table#inventoryTable, table#inventoryTable th, table#inventoryTable td {
+        font-size: 0.95rem;
+        padding: 8px 4px;
+    }
+}

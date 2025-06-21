@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login | HarvGood</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="loginStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="lang-switch" style="position: absolute; top: 20px; left: 20px; margin-bottom: 0;">
+        <a href="#" id="lang-en" class="lang-active">EN</a> /
+        <a href="#" id="lang-zh">中文</a>
+    </div>
+    <div class="center-container">
+        <div id="english-content" class="login-box">
+            <h2>Login</h2>
+            <input type="text" id="username-en" placeholder="username" required>
+            <input type="password" id="password-en" placeholder="password" required>
+            <button onclick="login('en')">login</button>
+            <p id="error-msg-en"></p>
+        </div>
+        <div id="chinese-content" class="login-box" style="display: none;">
+            <h2>登录</h2>
+            <input type="text" id="username-zh" placeholder="用户名" required>
+            <input type="password" id="password-zh" placeholder="密码" required>
+            <button onclick="login('zh')">登录</button>
+            <p id="error-msg-zh"></p>
+        </div>
+    </div>
+
+    <script src="lang-toggle.js"></script>
+    <script src="loginHandler.js"></script>
+    <script src="https://unpkg.com/aws-amplify@5.0.4/dist/aws-amplify.min.js"></script>
+</body>
+
+</html>
